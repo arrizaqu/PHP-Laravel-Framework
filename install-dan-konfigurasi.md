@@ -35,11 +35,21 @@ php -r "unlink('composer-setup.php');"
 
 namun lagi lagi tidak terlupakan adalah perlu di install terlebih dahulu PHP-CLI di composer kita sebelumnya.
 
-Setelah itu maka, kita akan dapatkan file di dalam directory tersebut file "composer.phar", untuk menjalan / installasi laravel baru secara lengkap menggunakan code berikut ini :
+Setelah itu maka, kita akan dapatkan file di dalam directory tersebut file "composer.phar", pertama kalinya perlu di tambahkan repository laravel/installer ke dalam compser, sehingga composer tahu kemana akan menjadi dependency file laravel yang akan diperlukan.  menjalan / installasi laravel baru secara lengkap menggunakan code berikut ini :
 
 ```
 php composer.phar composer global require laravel/installer
 ```
 
 dan tunggu hasil terselesaikan secara sempurna terdownload.
+
+## Hello World dan Development
+
+untuk menjalankan service applikasi dalam laravel cukup mudah, silahkan untuk mengetik code berikut ini : 
+
+```
+php artisan serve
+```
+
+
 
