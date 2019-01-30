@@ -24,7 +24,7 @@ Pertama, unduh Laravel installer menggunakan Composer:
 composer global require laravel/installer
 ```
 
-namun sebelum menggunakan composer sebaiknya untuk terlebih dahulu meng-install php composer, PHP Composer adalah salah satu dependency management untuk PHP, seperti halnya maven dan gradle. secara singkat bisa kita lakukan peng-installan composer dengan code berikut ini melalui CLI command line: 
+namun sebelum menggunakan composer sebaiknya untuk terlebih dahulu meng-install php composer, PHP Composer adalah salah satu dependency management untuk PHP, seperti halnya maven dan gradle. secara singkat bisa kita lakukan peng-installan composer dengan code berikut ini melalui CLI command line:
 
 ```
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -33,9 +33,9 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
 
-namun lagi lagi tidak terlupakan adalah perlu di install terlebih dahulu PHP-CLI di composer kita sebelumnya. 
+namun lagi lagi tidak terlupakan adalah perlu di install terlebih dahulu PHP-CLI di composer kita sebelumnya.
 
-Setelah itu makan kita akan dapatkan file di dalam directory tersebut file "composer.phar", untuk menjalan / installasi laravel baru secara lengkap menggunakan code berikut ini : 
+Setelah itu maka, kita akan dapatkan file di dalam directory tersebut file "composer.phar", untuk menjalan / installasi laravel baru secara lengkap menggunakan code berikut ini :
 
 ```
 php composer.phar composer global require laravel/installer
