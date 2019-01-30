@@ -41,7 +41,7 @@ Setelah itu, akan dapatkan file di dalam directory tersebut file "composer.phar"
 php composer.phar composer global require laravel/installer
 ```
 
-selanjutnya adalah create project laravel menggunakan composer sebagai beriikut : 
+selanjutnya adalah create project laravel menggunakan composer sebagai beriikut :
 
 ```
 php composer.phar create-project --prefer-dist laravel/laravel smartweb
@@ -49,9 +49,9 @@ php composer.phar create-project --prefer-dist laravel/laravel smartweb
 
 jika berjalan dengan baik, maka kita sudah memilki project laravel yang siap untuk di jalankan untuk pertama kali.
 
-## Hello World dan Development
+## Menjalankan Service
 
-untuk menjalankan service applikasi dalam laravel cukup mudah, silahkan untuk mengetik code berikut ini :
+Untuk menjalankan deployment atau pertama kali apakah aplikasi sudah bisa di jalan maka dapat dilakukan sebagai berikut :
 
 ```
 php artisan serve
