@@ -57,5 +57,5 @@ Untuk menjalankan deployment atau pertama kali apakah aplikasi sudah bisa di jal
 php artisan serve
 ```
 
-
+dan jalankan dengan url browser : http://localhost:8000/
 
