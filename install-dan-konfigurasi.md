@@ -1,6 +1,6 @@
 # Instalasi dan Konfigurasi
 
-Beberapa yang harus diperhatikan dalam konfigurasi laravel adalah sebagai berikut : 
+Beberapa yang harus diperhatikan dalam konfigurasi laravel adalah sebagai berikut :
 
 ## Standart kebutuhan
 
@@ -16,7 +16,7 @@ Kerangka kerja Laravel memiliki beberapa persyaratan sistem. Tentu saja, semua p
 * JSON PHP Extension
 * BCMath PHP Extension
 
-## Instalasi Laravel menggunakan Composer 
+## Instalasi Laravel menggunakan Composer
 
 Pertama, unduh Laravel installer menggunakan Composer:
 
@@ -24,7 +24,7 @@ Pertama, unduh Laravel installer menggunakan Composer:
 composer global require laravel/installer
 ```
 
-
+namun sebelum menggunakan composer sebaiknya untuk terlebih dahulu meng-install php composer, PHP Composer adalah salah satu dependency management untuk PHP, seperti halnya maven dan gradle.
 
 
 
