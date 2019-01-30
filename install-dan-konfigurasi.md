@@ -35,17 +35,23 @@ php -r "unlink('composer-setup.php');"
 
 namun lagi lagi tidak terlupakan adalah perlu di install terlebih dahulu PHP-CLI di composer kita sebelumnya.
 
-Setelah itu maka, kita akan dapatkan file di dalam directory tersebut file "composer.phar", pertama kalinya perlu di tambahkan repository laravel/installer ke dalam compser, sehingga composer tahu kemana akan menjadi dependency file laravel yang akan diperlukan.  menjalan / installasi laravel baru secara lengkap menggunakan code berikut ini :
+Setelah itu, akan dapatkan file di dalam directory tersebut file "composer.phar", pertama kalinya perlu di tambahkan repository laravel/installer ke dalam compser, sehingga composer tahu kemana akan mencari dependency laravel yang akan diperlukan pada saat instalasi.
 
 ```
 php composer.phar composer global require laravel/installer
 ```
 
-dan tunggu hasil terselesaikan secara sempurna terdownload.
+selanjutnya adalah create project laravel menggunakan composer sebagai beriikut : 
+
+```
+php composer.phar create-project --prefer-dist laravel/laravel smartweb
+```
+
+jika berjalan dengan baik, maka kita sudah memilki project laravel yang siap untuk di jalankan untuk pertama kali.
 
 ## Hello World dan Development
 
-untuk menjalankan service applikasi dalam laravel cukup mudah, silahkan untuk mengetik code berikut ini : 
+untuk menjalankan service applikasi dalam laravel cukup mudah, silahkan untuk mengetik code berikut ini :
 
 ```
 php artisan serve
