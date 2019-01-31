@@ -16,7 +16,7 @@ Kerangka kerja Laravel memiliki beberapa persyaratan sistem. Tentu saja, semua p
 * JSON PHP Extension
 * BCMath PHP Extension
 
-## Instalasi Laravel menggunakan Composer
+## Instalasi dengan PHP Composer
 
 Pertama, unduh Laravel installer menggunakan Composer:
 
@@ -57,5 +57,21 @@ Untuk menjalankan deployment atau pertama kali apakah aplikasi sudah bisa di jal
 php artisan serve
 ```
 
-dan jalankan dengan url browser : http://localhost:8000/
+dan jalankan dengan url browser : [http://localhost:8000/](http://localhost:8000/)
+
+# Application Key
+
+Hal berikutnya yang harus Anda lakukan setelah menginstal Laravel adalah mengatur kunci aplikasi Anda ke string acak. Jika Anda menginstal Laravel melalui Composer atau installer Laravel, kunci ini telah ditetapkan untuk Anda
+
+```
+php artisan key:generate
+```
+
+**If the application key is not set, your user sessions and other encrypted data will not be secure!**
+
+
+
+
+
+
 
