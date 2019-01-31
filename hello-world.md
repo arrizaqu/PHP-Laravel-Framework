@@ -1,6 +1,6 @@
 # Hello World
 
-Untuk menjalankan hello world pada laravel, mudahnya dibuatkan satu controller untuk men-create tampilan text hello world. 
+Untuk menjalankan hello world pada laravel, mudahnya dibuatkan satu controller untuk men-create tampilan text hello world.
 
 ## Create Controller
 
@@ -19,12 +19,11 @@ class TestController extends Controller
         echo "hello world";
     }
 }
-
 ```
 
 ## Define Route
 
-Untuk menjalankan Controller yang sudah definisikan sebelumnya perlu di tambahkan pada Route, lebih tepatnya pada directory "Route/web.php" seperti berikut : 
+Untuk menjalankan Controller yang sudah definisikan sebelumnya perlu di tambahkan pada Route, lebih tepatnya pada directory "Route/web.php" seperti berikut :
 
 ```php
 <?php
@@ -41,6 +40,10 @@ Untuk menjalankan Controller yang sudah definisikan sebelumnya perlu di tambahka
 
 
 use Illuminate\Support\Facades\Route;
+
+Route::get('/hello', function(){
+    return "hello world php laravel";    
+});
 ```
 
 
