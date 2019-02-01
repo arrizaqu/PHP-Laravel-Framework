@@ -112,7 +112,7 @@ DB::statement('drop table users');
 
 ### Listening For Query Events
 
-Terkadang kita menginginkan sebuah event listener pada saat menjalankan query berlangsung hal ini mungkin saja atau  beberapa script untuk keperluan testing, atau melihat proses binding dan checking pada saat laravel menggunakan aktivitas query, untuk hal itu kita bisa melakukan pada "boot" di Service Provider, sebagai berikut : 
+Terkadang kita menginginkan sebuah event listener pada saat menjalankan query berlangsung hal ini mungkin saja atau  beberapa script untuk keperluan testing, atau melihat proses binding dan checking pada saat laravel menggunakan aktivitas query, untuk hal itu kita bisa melakukan pada "boot" di Service Provider, sebagai berikut :
 
 ```php
 <?php
@@ -148,6 +148,18 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 }
+```
+
+## Database Transaction
+
+Dalam menggunakan metode transaksi perlu menjalankan serangkaian operasi tertentu sehingga secara otomatis akan dibatalkan jika salah satu proses tidak berkerja atau terjadi kegagalan, berikut ini adalah contoh potongan script laravel melakukan tugas tersebut : 
+
+```php
+DB::transaction(function () {
+    DB::table('users')->update(['votes' => 1]);
+
+    DB::table('posts')->delete();
+});
 ```
 
 
