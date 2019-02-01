@@ -42,9 +42,9 @@ Saat menggunakan beberapa koneksi, Anda dapat mengakses setiap koneksi melalui m
 $users = DB::connection('foo')->select(...);
 ```
 
-bisa juga menggunakan PDO sebagai database koneksi sebagai berikut : 
+bisa juga menggunakan PDO sebagai database koneksi sebagai berikut :
 
-```
+```php
 $pdo = DB::connection()->getPdo();
 ```
 
