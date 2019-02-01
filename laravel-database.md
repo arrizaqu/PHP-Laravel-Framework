@@ -78,10 +78,36 @@ class UserController extends Controller
 
 ## Using Named Bindings
 
-Tanda dari ? akan mewakili proses binding parameter, seperti contoh berikut : 
+Tanda dari ? akan mewakili proses binding parameter, seperti contoh berikut :
 
 ```php
 $results = DB::select('select * from users where id = :id', ['id' => 1]);
+```
+
+### Insert
+
+```php
+DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle']);
+```
+
+### Update 
+
+```php
+$affected = DB::update('update users set votes = 100 where name = ?', ['John']);
+```
+
+### Delete
+
+```php
+$deleted = DB::delete('delete from users');
+```
+
+## Running A General Statement
+
+Untuk menggunakan Query secara general, maka bisa dilakukan sebagai berikut : 
+
+```php
+DB::statement('drop table users');
 ```
 
 
