@@ -48,5 +48,33 @@ bisa juga menggunakan PDO sebagai database koneksi sebagai berikut :
 $pdo = DB::connection()->getPdo();
 ```
 
+## Raw SQL Query
+
+Setelah mengonfigurasi koneksi database kita, maka kita dapat menjalankan query menggunakan DB. DB menyediakan metode untuk setiap jenis query seperti: SELECT, UPDATE, INSERT, DELETE, dan STATEMENT.
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Show a list of all of the application's users.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        $users = DB::select('select * from users where active = ?', [1]);
+
+        return view('user.index', ['users' => $users]);
+    }
+}
+```
+
 
 
