@@ -152,7 +152,7 @@ class AppServiceProvider extends ServiceProvider
 
 ## Database Transaction
 
-Dalam menggunakan metode transaksi perlu menjalankan serangkaian operasi tertentu sehingga secara otomatis akan dibatalkan jika salah satu proses tidak berkerja atau terjadi kegagalan, berikut ini adalah contoh potongan script laravel melakukan tugas tersebut : 
+Dalam menggunakan metode transaksi perlu menjalankan serangkaian operasi tertentu sehingga secara otomatis akan dibatalkan jika salah satu proses tidak berkerja atau terjadi kegagalan, berikut ini adalah contoh potongan script laravel melakukan tugas tersebut :
 
 ```php
 DB::transaction(function () {
@@ -160,6 +160,18 @@ DB::transaction(function () {
 
     DB::table('posts')->delete();
 });
+```
+
+## Handling Deadlocks
+
+_Deadlock _adalah jalan buntu yang dapat terjadi ketika dua atau lebih transaksi masing-masing menunggu lock yang sedang dipegang oleh transaksi lainnya untuk dilepas. Hanya ada satu cara untuk menghancurkan  _deadlock_, yaitu _abort_
+
+```php
+DB::transaction(function () {
+    DB::table('users')->update(['votes' => 1]);
+
+    DB::table('posts')->delete();
+}, 5);
 ```
 
 
