@@ -34,5 +34,19 @@ Mungkin saja kita menginginkan menggunakan 1 koneksi database untuk keperluan me
 ],
 ```
 
+## Multiple Database Connections
+
+Saat menggunakan beberapa koneksi, Anda dapat mengakses setiap koneksi melalui metode koneksi, Nama database akan menjadi salah satu koneksi yang terdaftar di file konfigurasi "config / database.php" :
+
+```php
+$users = DB::connection('foo')->select(...);
+```
+
+bisa juga menggunakan PDO sebagai database koneksi sebagai berikut : 
+
+```
+$pdo = DB::connection()->getPdo();
+```
+
 
 
