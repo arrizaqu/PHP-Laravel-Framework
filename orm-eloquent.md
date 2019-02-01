@@ -14,5 +14,22 @@ Model biasanya dilakukan pada "app" diretory, tapi bisa saja kita memberikan tem
 php artisan make:model Flight
 ```
 
+## Eloquent Model Conventions
+
+Setelah selesai mengerjakan script diatas kurang lebihnya akan terbentuk class Flight seperti berikut : 
+
+```php
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Flight extends Model
+{
+    //
+}
+```
+
 
 
