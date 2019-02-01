@@ -7,7 +7,7 @@ Laravel membuat interaksi dengan database menjadi sangat sederhana diberbagai je
 3. SQLite
 4. SQLServer
 
-## Configurasi
+## Configurasi 
 
 File database konfigurasi dalam laravel terletak pada "config/database.php", bisa saja pada file config ini, akan mendefinisikan semua database connection, serta dapat menentukan koneksi database manakah yang akan dijadikan sebagai default.
 
@@ -176,13 +176,13 @@ DB::transaction(function () {
 
 ### Manually Using Transactions
 
-Pada aplikasi nya laravel men-support jika memungkinkan untuk mode transaksi dibuatkan sebagai manual, seperti code berikut ini : 
+Pada aplikasi nya laravel men-support jika memungkinkan untuk mode transaksi dibuatkan sebagai manual, seperti code berikut ini :
 
 ```php
 DB::beginTransaction();
 ```
 
-code rollback 
+code rollback
 
 ```php
 DB::beginTransaction();
