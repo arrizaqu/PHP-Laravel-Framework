@@ -90,7 +90,7 @@ $results = DB::select('select * from users where id = :id', ['id' => 1]);
 DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle']);
 ```
 
-### Update 
+### Update
 
 ```php
 $affected = DB::update('update users set votes = 100 where name = ?', ['John']);
@@ -104,10 +104,50 @@ $deleted = DB::delete('delete from users');
 
 ## Running A General Statement
 
-Untuk menggunakan Query secara general, maka bisa dilakukan sebagai berikut : 
+Untuk menggunakan Query secara general, maka bisa dilakukan sebagai berikut :
 
 ```php
 DB::statement('drop table users');
+```
+
+### Listening For Query Events
+
+Terkadang kita menginginkan sebuah event listener pada saat menjalankan query berlangsung hal ini mungkin saja atau  beberapa script untuk keperluan testing, atau melihat proses binding dan checking pada saat laravel menggunakan aktivitas query, untuk hal itu kita bisa melakukan pada "boot" di Service Provider, sebagai berikut : 
+
+```php
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        DB::listen(function ($query) {
+            // $query->sql
+            // $query->bindings
+            // $query->time
+        });
+    }
+
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}
 ```
 
 
