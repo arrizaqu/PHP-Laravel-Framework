@@ -162,9 +162,9 @@ DB::transaction(function () {
 });
 ```
 
-## Handling Deadlocks
+### Handling Deadlocks
 
-_Deadlock _adalah jalan buntu yang dapat terjadi ketika dua atau lebih transaksi masing-masing menunggu lock yang sedang dipegang oleh transaksi lainnya untuk dilepas. Hanya ada satu cara untuk menghancurkan  _deadlock_, yaitu _abort_
+_Deadlock \_adalah jalan buntu yang dapat terjadi ketika dua atau lebih transaksi masing-masing menunggu lock yang sedang dipegang oleh transaksi lainnya untuk dilepas. Hanya ada satu cara untuk menghancurkan  \_deadlock_, yaitu _abort_
 
 ```php
 DB::transaction(function () {
@@ -172,6 +172,26 @@ DB::transaction(function () {
 
     DB::table('posts')->delete();
 }, 5);
+```
+
+### Manually Using Transactions
+
+Pada aplikasi nya laravel men-support jika memungkinkan untuk mode transaksi dibuatkan sebagai manual, seperti code berikut ini : 
+
+```php
+DB::beginTransaction();
+```
+
+code rollback 
+
+```php
+DB::beginTransaction();
+```
+
+code commit transaction jika dianggap proses sempurna dilakukan
+
+```php
+DB::beginTransaction();
 ```
 
 
