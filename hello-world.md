@@ -46,7 +46,7 @@ Route::get('/hello', function(){
 });
 ```
 
-## Access web URL 
+## Access web URL
 
 ```
 http://localhost:8000/index.php/hello
