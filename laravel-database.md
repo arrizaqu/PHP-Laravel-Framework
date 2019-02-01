@@ -76,5 +76,13 @@ class UserController extends Controller
 }
 ```
 
+## Using Named Bindings
+
+Tanda dari ? akan mewakili proses binding parameter, seperti contoh berikut : 
+
+```php
+$results = DB::select('select * from users where id = :id', ['id' => 1]);
+```
+
 
 
