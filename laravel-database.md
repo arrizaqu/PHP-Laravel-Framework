@@ -1,6 +1,6 @@
 # Laravel Database
 
-Laravel membuat interaksi dengan database menjadi sangat sederhana diberbagai jenis basis data menggunakan raw sql, baik menggunakan query builder dan ORM Eloquent, kemudia untuk ini maka laravel secara default support terhadap 4 database, diantaranya : 
+Laravel membuat interaksi dengan database menjadi sangat sederhana diberbagai jenis basis data menggunakan raw sql, baik menggunakan query builder dan ORM Eloquent, kemudia untuk ini maka laravel secara default support terhadap 4 database, diantaranya :
 
 1. Mysql
 2. PostgresSQL
@@ -13,7 +13,7 @@ File database konfigurasi dalam laravel terletak pada "config/database.php", bis
 
 ## Read & Write Connections
 
-Mungkin saja kita menginginkan menggunakan 1 koneksi database untuk keperluan menampilkan data, namun seperti INSERT, UPDATE, DELETE untuk kerperluan yang berbeda, untuk menangani hal ini maka laravel dapat memisahkan konfigurasi untuk READ and WRITE sebagai berikut: 
+Mungkin saja kita menginginkan menggunakan 1 koneksi database untuk keperluan menampilkan data, namun seperti INSERT, UPDATE, DELETE untuk kerperluan yang berbeda, untuk menangani hal ini maka laravel dapat memisahkan konfigurasi untuk READ and WRITE sebagai berikut:
 
 ```php
 'mysql' => [
@@ -33,8 +33,6 @@ Mungkin saja kita menginginkan menggunakan 1 koneksi database untuk keperluan me
     'prefix'    => '',
 ],
 ```
-
-
 
 
 
