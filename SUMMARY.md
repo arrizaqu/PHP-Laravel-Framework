@@ -10,4 +10,5 @@
 * [ORM Eloquent](orm-eloquent.md)
 * User Management
   * [RBAC](rbac.md)
+* [Datatables](datatables.md)
 
