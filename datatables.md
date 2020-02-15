@@ -78,5 +78,17 @@ var oTable = $('#area-datatable').DataTable({
 
 ## Blade
 
+```
+<table id="area-datatable" class="table table-bordered table-hover">
+            <thead>
+            <tr>
+            <th>Name</th>
+            <th>Description</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+```
+
 
 
