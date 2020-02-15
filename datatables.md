@@ -9,7 +9,7 @@
 
 ```php
 public function listArea(Request $request, AreaService $areaService){
-        
+
         $mParam = array(
             'orderColumnName' => ($request->get('orderColumnName') == "") ? 'name' : $request->get('orderColumnName'),
             'orderType' => ($request->get('orderType') == "") ? 'asc' : $request->get('orderType'),
@@ -25,12 +25,19 @@ public function listArea(Request $request, AreaService $areaService){
             'recordsFiltered' =>  $data->total(),
             'data' => $data->items()
         );
-        
+
         return $mData;
     }
 ```
 
 ## Service
+
+```php
+public function findArea($param){
+        $areas = Area::where('name', 'LIKE',"%".$param['search']."%")->orderBy($param['orderColumnName'],$param['orderType'])->paginate($param['size']);
+        return $areas;
+    }
+```
 
 ## Javascript
 
