@@ -11,4 +11,6 @@
 * User Management
   * [RBAC](rbac.md)
 * [Datatables](datatables.md)
+* [Report with DOMPDF](report-with-dompdf.md)
+* [Send Email and Mail Trap](setup-email-with-mailtrap.md)
 
