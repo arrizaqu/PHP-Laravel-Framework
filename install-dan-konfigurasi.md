@@ -69,9 +69,7 @@ php artisan key:generate
 
 **If the application key is not set, your user sessions and other encrypted data will not be secure!**
 
+## Install existing application
 
-
-
-
-
+php -d "disable\_functions=" composer.phar install --ignore-platform-reqs
 
