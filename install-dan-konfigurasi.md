@@ -71,5 +71,5 @@ php artisan key:generate
 
 ## Install existing application
 
-php -d "disable\_functions=" composer.phar install --ignore-platform-reqs
+`php -d "disable_functions=" composer.phar install --ignore-platform-reqs`
 
