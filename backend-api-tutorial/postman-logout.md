@@ -15,13 +15,7 @@ Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzllNGFlMzYy
 ## Body Raw
 
 ```
-* Type: JSON
-* format : 
-{
-    "email": "arrizaqu@arrizaqu.com",
-    "password": "123456",
-    "remember_me": true
-}
+-
 ```
 
 ## Response
