@@ -1,6 +1,4 @@
-```
-Request SIGNUP
-```
+# SIGNUP
 
 ## Method
 
