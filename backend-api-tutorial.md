@@ -72,5 +72,7 @@ class AuthServiceProvider extends ServiceProvider
 }
 ```
 
+## Setting Driver for Token Guard in 'config/auth' 
+
 
 
