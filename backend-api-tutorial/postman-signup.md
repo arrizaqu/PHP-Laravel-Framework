@@ -26,5 +26,13 @@ X-Requested-With: XMLHttpRequest
 }
 ```
 
+## Response
+
+```
+{
+    "message": "Successfully created user!"
+}
+```
+
 
 
