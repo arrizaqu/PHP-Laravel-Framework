@@ -72,7 +72,32 @@ class AuthServiceProvider extends ServiceProvider
 }
 ```
 
-## Setting Driver for Token Guard in 'config/auth' 
+## Setting Driver for Token Guard in 'config/auth'
+
+```
+// config/auth
+
+<?php
+
+return [
+    ...
+
+    'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'api' => [
+            'driver' => 'passport', // set this to passport
+            'provider' => 'users',
+            'hash' => false,
+        ],
+    ],
+
+    ...
+];
+```
 
 
 
