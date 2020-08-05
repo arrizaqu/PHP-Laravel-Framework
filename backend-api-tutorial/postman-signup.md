@@ -1,4 +1,6 @@
-# Request SIGNUP
+```
+Request SIGNUP
+```
 
 ## Method
 
@@ -13,9 +15,16 @@ X-Requested-With: XMLHttpRequest
 
 ## Body Raw
 
-
-
-
+```
+* Type: JSON
+* format : 
+{
+    "name": "arrizaqu",
+    "email": "arrizaqu@arrizaqu.com",
+    "password": "123456",
+    "password_confirmation": "123456"
+}
+```
 
 
 
