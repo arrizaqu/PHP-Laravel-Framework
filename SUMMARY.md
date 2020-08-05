@@ -17,4 +17,5 @@
 * [Backend Api Tutorial](backend-api-tutorial.md)
   * [POSTMAN SIGNUP](backend-api-tutorial/postman-signup.md)
   * [POSTMAN LOGIN](backend-api-tutorial/postman-login.md)
+  * [POSTMAN LOGOUT](backend-api-tutorial/postman-logout.md)
 
